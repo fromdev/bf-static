@@ -1,79 +1,242 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html dir="ltr" lang="en-US">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Bf-static : bf static site" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Bf-static</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/fromdev/bf-static">View on GitHub</a>
-
-          <h1 id="project_title">Bf-static</h1>
-          <h2 id="project_tagline">bf static site</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/fromdev/bf-static/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/fromdev/bf-static/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Bf-static maintained by <a href="https://github.com/fromdev">fromdev</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+	
+    
+    <!-- ============================================
+        Stylesheets
+    ============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="css/retina.css" />
+	<link rel="stylesheet" href="css/colors.php" type="text/css" />
+	<link rel="stylesheet" href="css/tipsy.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/ls/css/layerslider.css" type="text/css" />
+    
+    
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--[if lt IE 9]>
+    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+	
+	
+    <!-- ============================================
+        External JavaScripts
+    ============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/greensock.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/layerslider.transitions.js"></script>
+    <script type="text/javascript" src="js/jquery.layerslider.js"></script>
+    
+    
+    <!-- ============================================
+        Document Title
+    ============================================= -->
+	<title>Buy Twitter Followers - BillionFollowers</title>
+    
+    
+    <style type="text/css">
+    
+        .layer-features p {
+            font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', Helvetica, Arial, Serif;
+			padding: 0px 10px;
+			height: 30px;
+			line-height: 30px;
+			box-shadow: 0px 4px 10px -5px black;
+			color: white;
+			font-size: 20px;
+			background: #8bae4e;
+			background: -moz-linear-gradient(left, #8bae4e 0%, #b1c758 100%);
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,#8bae4e), color-stop(100%,#b1c758));
+			background: -webkit-linear-gradient(left, #8bae4e 0%,#b1c758 100%);
+			background: -o-linear-gradient(left, #8bae4e 0%,#b1c758 100%);
+			background: -ms-linear-gradient(left, #8bae4e 0%,#b1c758 100%);
+			background: linear-gradient(to right, #8bae4e 0%,#b1c758 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bae4e', endColorstr='#b1c758',GradientType=1 );
+	   }
+       
+       .l1-s4 {
+            font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', Helvetica, Arial, Serif;
+			padding: 0px 10px;
+			height: 40px;
+			line-height: 40px;
+			box-shadow: 0px 4px 10px -5px black;
+			color: white;
+			text-shadow: none;
+			font-size: 28px;
+			color: #4f6716;
+			background: white;
+		}
+    
+    </style>
     
 
-  </body>
+</head>
+
+<body class="stretched">
+
+
+    <div id="wrapper" class="clearfix">
+        <div id="header" class="header7">
+        
+            
+            <div class="container clearfix">
+            
+                <div id="logo">
+                	<a href="index.html" class="standard-logo"><img src="images/logo.png" alt="BillionFollowers" title="BillionFollowers" width="170"/></a>
+                    <a href="index.html" class="retina-logo"><img src="images/logo@2x.png" alt="BillionFollowers" title="BillionFollowers" width="170" /></a>
+                </div>
+                <div id="primary-menu">
+                    <div class="rs-menu"><i class="fa fa-align-justify"></i></div>
+                        <ul id="main-menu">
+                            <li class="current"><a href="index.html"><div><i class="fa fa-home"></i>Home</div><span>Let's Start here</span></a></li>
+                        <li><a href="#"><div><i class="fa fa-twitter"></i> Twitter</div><span>Followers and more</span></a>
+                            <ul>
+                                <li><a href="BuyTwitterFollowers.html"><div><i class="fa fa-group"></i>Buy Followers</div></a></li>
+                                <li><a href="BuyTwitterRetweets.html"><div><i class="fa fa-refresh"></i> Buy Retweets</div></a></li>
+                                <li><a href="BuyTwitterFavorites.html"><div><i class="fa fa-bookmark"></i>Buy Favorites</div></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="portfolio-4.html"><div><i class="fa fa-facebook"></i> Facebook</div><span>Fans and Likes</span></a>
+                            <ul>
+                                <li><a href="#"><div><i class="fa fa-group"></i>Buy Fans</div></a></li>
+                                <li><a href="#"><div><i class="fa fa-thumbs-o-up"></i> Buy Likes</div></a></li>
+                            </ul>
+                                </li>
+                        <li><a href="blog.html"><div><i class="fa fa-pencil"></i>Blog</div><span>Latest News</span></a></li>
+                           </ul>
+                </div>
+            </div>
+    
+       
+        </div>
+        
+        <div id="slider" class="layerslider-wrap">
+        
+            <div class="container clearfix">
+            
+            
+                <div id="layerslider" class="clearfix" style="height: 400px;">
+                    <div class="ls-slide layer-features" data-ls="slidedelay: 8000;slidedirection: left;">
+                            <img src="images/slider/layer/2/bg.jpg" class="ls-bg" />
+                                <img class="ls-s2" src="images/slider/layer/1/mac.jpg" style="position: absolute; top:5px; left: 400px; slidedirection:right; slideoutdirection:bottom; durationin:800; durationout:800; easingin:easeOutBack; easingout:easeInBack; delayin:1300;" />
+                                  <h2 class="ls-s3 l1-s4" style="position: absolute; top:70px; left: 30px; slidedirection : fade; slideoutdirection : top; durationin : 1100; durationout : 750; easingout:easeInBack; delayin : 1800;">More Social Followers</h2>
+                                <h2 class="ls-s3 l1-s4" style="position: absolute; top:115px; left: 30px; slidedirection : fade; slideoutdirection : top; durationin : 1100; durationout : 750; easingout:easeInBack; delayin : 2300;">More Customers</h2>
+                                <h2 class="ls-s3 l1-s4" style="position: absolute; top:160px; left: 30px; slidedirection : fade; slideoutdirection : top; durationin : 1100; durationout : 750; easingout:easeInBack; delayin : 2800;">More Business</h2>
+                                                                               </div>
+                          </div>
+                <script type="text/javascript">
+        			jQuery(document).ready(function($){
+        				$('#layerslider').layerSlider({
+        				    autoStart : true,
+        					skin : 'noskin',
+                            skinsPath : 'css/ls/skins/',
+                            animateFirstLayer : true,
+                            navPrevNext : true,
+        					responsiveUnder : 979,
+        					sublayerContainer : 960,
+                            pauseOnHover : false
+        				});
+        			});		
+        		</script>
+                <div class="slider-line"></div>
+            
+            
+            </div>
+        
+        
+        </div>
+        
+        <div id="content">
+        	<div class="content-wrap">
+                <div class="container clearfix">
+                    <div class="col_full center">
+                        <div class="btn-group">
+                          <button class="btn btn-info btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                            <i class="fa fa-twitter"></i> Twitter Services <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="BuyTwitterFollowers.html"> <i class="fa fa-group"></i>  Buy Followers</a></li>
+                            <li><a href="BuyTwitterRetweets.html"><i class="fa fa-refresh"></i> Buy Retweets</a></li>
+                            <li><a href="BuyTwitterFavorites.html"><i class="fa fa-bookmark"></i> Buy Favorites</a></li>
+                           </ul>
+                        </div>
+                         <div class="btn-group">
+                          <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                            <i class="fa fa-facebook"></i> Facebook Services <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="BuyFacebookFans.html"><i class="fa fa-group"></i> Buy Fans</a></li>
+                            <li><a href="BuyFacebookLikes.html"> <i class="fa fa-thumbs-o-up"></i>  Buy Likes</a></li>
+                          </ul>
+                        </div>
+                         <h2 style="line-height: 1.6;">Welcome! So You Want <span>More Followers.</span> Awesome!  Thats What We Do Best.</h2>
+                          </div>
+                            <script type="text/javascript">
+                        $(document).ready( function() {
+                                        tab_widget( '#tabwidget-1' );
+                                });
+                    </script>
+                        <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer" class="footer-dark">
+            <div class="container clearfix">
+        
+        
+                <div class="footer-widgets-wrap clearfix">
+                    <div class="col_one_fourth">
+                        <div class="widget portfolio-widget clearfix">
+                            <h4>About <span>Billion</span>Followers</h4>
+                            <p>We are a Social Media Marketing and Strategic Planning team of industry professionals, dedicated to helping our customers leverage the explosive growth of social media marketing.</p>
+                        </div>
+                    </div>
+                    <div class="col_one_fourth">
+                        <div id="linkcat-2" class="widget widget_links clearfix">
+                        </div>
+                    </div>
+                            <div class="col_one_fourth">
+                    </div>
+                            <div class="col_one_fourth">
+                    	<div class="widget clearfix">
+                                  </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="clear"></div>
+        
+        <div id="copyrights" class="copyrights-dark">
+        
+            <div class="container clearfix">
+        
+            
+                <div class="col_half">
+                    Copyrights &copy; 2013 &amp; All Rights Reserved by BillionFollowers.com
+                </div>
+                <div class="col_half col_last tright">
+                    <a href="Policy.html">Privacy Policy</a><span class="link-divider">/</span><a href="Terms.html">Terms of Service</a><span class="link-divider">/</span><a href="FAQ.html">FAQs</a>
+                </div>
+            
+            </div>
+        
+        </div>
+
+    </div>
+    <div id="gotoTop" class="fa fa-angle-up"></div>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
 </html>
