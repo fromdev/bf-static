@@ -126,7 +126,7 @@
                 
                 <div class="landing-offer-media">
                 
-                    <img src="images/slider/landing/responsive.jpg" alt="Responsive Design" title="Responsive Design" />
+                    <img src="images/slider/landing/twitter-followers.jpg" alt="Buy Twitter Followers" title="Buy Twitter Followers" />
                 
                 </div>
                 
@@ -134,9 +134,17 @@
                 <div class="landing-offer-text col_last">
                 
                 
-                    <h1>5000 Real Twitter Followers for <span>$19.99</span>.</h1>
-                    
-                    <p class="landing-desc">No discere definitionem vix. In mel suas deleniti voluptatum, mei ea inani persius.</p>
+                    <h1>5,000 Twitter Followers</h1>
+                    <h1><span>$19.99</span></h1>
+                        
+                    <p class="landing-desc">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-empty"></i>
+                    </p>        
+                    <p class="landing-desc">Get followed by active twitter users.</p>
                     
                     <ul class="landing-features fa-ul">
                     
@@ -177,7 +185,7 @@
 									<input type="hidden" name="cmd" value="_s-xclick">
 									<table>
 										<tr><td><input type="hidden" name="on0" value="Twitter Screen Name"></td></tr>
-										<tr><td><input type="text" class="required input-block-level" id="twscreen" name="os0" maxlength="200" value="" placeholder="Twitter Screen Name"></td></tr>
+										<tr><td><input type="text" class="required input-block-level" id="orderField1" name="os0" maxlength="200" value="" placeholder="Twitter Screen Name"></td></tr>
 									</table>
 									<input type="hidden" name="encrypted" id="encrypted" value="">
 								</form>
@@ -303,19 +311,17 @@
                             });
                             
                              $("#order-submit").click(function() { 
-                                var screenName = $("#twscreen").val();
-                               
-                                if(screenName) {
-                                	 var formid = $("#formid").val();
-                                	 if(formid) {
-                               		 	var enc = $("#encrypted-"+formid).val();
-                               		    $("#encrypted").val(enc);
-                               		    $("#twitterScreenName").val(screenName);
-                               			$('#order-form').submit();
-                               		 }
-                                }
+                                var formid = $("#formid").val();
+                                if(formid) {
+                               		var enc = $("#encrypted-"+formid).val();
+                               		if(enc) {
+                               			$("#encrypted").val(enc);
+                               		}
+                               	}
+                                $('#order-form').submit();    
                              });
-                             
+                            
+                             $("#order-form").validate();
                         </script>
         <div id="footer" class="footer-dark">
             <div class="container clearfix">
