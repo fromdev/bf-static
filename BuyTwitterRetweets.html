@@ -36,6 +36,7 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/greensock.js"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/jquery.jqgoogleforms.min.js"></script>
 
     
     
@@ -309,6 +310,7 @@
             </div>
         </div>
                     	<script type="text/javascript">
+                          var googleForm = $(window).jqGoogleForms({"formKey": "1Q33_O3q8u92fAGwIXXFqzzjbHqPcIrIKKUvM1__rOow"});
                           
                             $("a").click(function() {
                                var formid = $(this).attr('data-plan-id');
@@ -327,6 +329,13 @@
                                		var enc = $("#encrypted-"+formid).val();
                                		if(enc) {
                                			$("#encrypted").val(enc);
+                               		}
+                               		try {
+                               			googleForm.sendFormData({
+    											"entry_2003997800": $("#orderField1").val(),
+    											"entry_1883297704": $("#myModalLabel").text()
+												});
+                               		}catch(err){
                                		}
                                	}
                                 $('#order-form').submit();    
