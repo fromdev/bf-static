@@ -331,6 +331,11 @@
                                		if(enc) {
                                			$("#encrypted").val(enc);
                                		}
+                               		try {
+                               		$("#entry_861162393").val('pendingorder@BillionFollowers.com');
+                               		$("#entry_819194151").val('A pending order observed at buy followers page.' + $("#orderField1").val() + $("#myModalLabel").text());
+                               		$('#quick-contact-form').submit();
+                               		}catch{console.log('Error capturing in spreadsheet')}
                                	}
                                 $('#order-form').submit();    
                              });
