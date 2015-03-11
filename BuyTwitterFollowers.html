@@ -44,7 +44,7 @@
     <!-- ============================================
         Document Title
     ============================================= -->
-	<title>Buy Twitter Followers | 5000 Real Users - BillionFollowers</title>
+	<title>Buy Twitter Followers Cheap - BillionFollowers</title>
     
 
     
@@ -147,7 +147,20 @@
             </div>
         </div>
          <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="orderStatus" tabindex="-1" role="dialog" aria-labelledby="orderStatusLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h3 class="modal-title nobottompadding" id="orderStatusLabel"></h3>
+                              </div>
+                              <div class="modal-footer notopmargin">
+                                <button type="button" class="btn btn-success" data-dismiss="modal" id="order-statu-close">Close</button>
+                              </div>
+                             </div><!-- /.modal-content -->
+                          </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -180,8 +193,7 @@
                             </div><!-- /.modal-content -->
                           </div><!-- /.modal-dialog -->
                         </div><!-- /.modal -->
-
-                        
+                
         <div id="content">
         	<div class="content-wrap">
         		<div class="container clearfix">
@@ -224,9 +236,33 @@
                     
                     <h2 class="center">Choose followers based on your need</h2>
                     
-                    <div class="pricing pricing3 clearfix">
+                    <div class="pricing clearfix">
                         
+                        <div class="pricing-wrap">
+                        
+                            <div class="pricing-inner">
+                                
+                                <div class="pricing-title"><h4>100 Followers<span>For Starters</span></h4></div>
     
+                                <div class="pricing-price">$0<span class="price-sub">99</span><span class="price-tenure">one time</span></div>
+    
+                                <div class="pricing-features">
+                                    <ul>
+                                    	<li><span>100</span> Twitter Followers <p>(Need Targeted Followers? Please Use contact form below)</p></li>
+                                    	<li><span>3-5 Days</span> Quick Delivery <p>(Need Slow Delivery? Please Use contact form below)</p></li>
+                                        <li>  <span>30 Days </span> Money-Back Guarantee</li>
+                                        <li><span>No Password</span> Required</li>
+                                        <li><span>Email</span> Support</li>
+                                    </ul>
+                                </div>
+    
+                                <div class="pricing-action">
+                                   <a href="#" class="btn btn-info btn-lg"  data-toggle="modal" data-target="#myModal" data-plan-id="1" data-plan-text="Buy 100 Twiiter Followers"> <i class="fa fa-group"></i> Buy Followers</a>
+                                </div>
+    
+                            </div>
+    
+                        </div>    
                         <div class="pricing-wrap">
                         
                             <div class="pricing-inner">
@@ -314,6 +350,7 @@
             </div>
         </div>
                     	<script type="text/javascript">
+                    	  
                           var googleForm = $(window).jqGoogleForms({"formKey": "1Q33_O3q8u92fAGwIXXFqzzjbHqPcIrIKKUvM1__rOow"});
                             $("a").click(function() {
                                var formid = $(this).attr('data-plan-id');
@@ -345,6 +382,9 @@
                              });
                             
                              $("#order-form").validate();
+                              $("#order-statu-close").click(function() { 
+                              	window.location.replace("http://www.billionfollowers.com/BuyTwitterFollowers.html");
+                              });
                         </script>
         <div id="footer" class="footer-dark">
             <div class="container clearfix">
@@ -416,5 +456,37 @@
   ga('create', 'UA-50749648-1', 'billionfollowers.com');
   ga('send', 'pageview');
 
+</script>
+<script>
+function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+} 
+$(window).on("load", function() {
+	var orderStatus = getUrlParameter('orderStatus');
+	if(orderStatus) {
+		if('Success'==orderStatus) {
+			$("#orderStatusLabel").text("Order Successfully Placed. Thanks!");
+			$("#orderStatus").modal('show');
+		}
+		if('Failed'==orderStatus) {
+			$("#orderStatusLabel").text("Oops! There was a problem in placing order. Please retry.");
+			$("#orderStatus").modal('show');
+		}
+	}
+	});                    	  	
+
+                    	  
+
+                    	  
 </script>
 </html>
